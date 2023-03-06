@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button  mode="ios" class="voltar" color="--ion-background-color:#323131;" routerLink="/tela-principal">
+      <img id="img_voltar" src="assets/imagens/voltar.png" alt="">
+    </ion-button>
+    <img class="logo" src="assets/imagens/logo.png" alt="">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body" mode="ios">
+
+  <ion-button class="buttonAdd" (click)="enviarDados()" color="--ion-background-color:#323131;">Criar</ion-button>
+  <ion-button class="buttonEdit" (click)="setOpen(true)" color="--ion-background-color:#323131;">Editar</ion-button>
+
+  <!-- <div> começo da tela cabelo -->
+    <div class="title">
+      <img src="assets\imagens\depilacao.png" alt="">
+      <ion-label>Depilação</ion-label>
+    </div>
+    
+    <div class="itens">
+      <!-- Depilação c/ Cera -->
+    <ion-item mode="ios" button detail-icon="false" lines="full" class="field" routerLink="/tela-agenda">
+      <ion-label> 
+        <h3>Depilação c/ Cera</h3> 
+        <h5>Utiliza cera quente ou fria, <br> desde sua raiz.</h5>
+      </ion-label>
+      <ion-note slot="end">R$15</ion-note>
+      </ion-item>
+  
+      <!-- Depilação c/ Pinça -->
+      <ion-item mode="ios" button class="field" detail-icon="false" routerLink="/tela-agenda">
+        <ion-label> <h3>Depilação c/ Pinça</h3>
+           <h5>Utiliza a pinça, fio por fio.</h5> 
+        </ion-label>
+        <ion-note slot="end">R$10</ion-note>
+       </ion-item>
+  
+       <!-- Depilação c/ Lâmina -->
+       <ion-item mode="ios" button class="field" detail-icon="false" routerLink="/tela-agenda">
+        <ion-label> <h3>Depilação c/ Lâmina</h3>
+           <h5>Utiliza a lâmina, cortando <br> o pelo em sua base. </h5> 
+        </ion-label>
+        <ion-note slot="end">R$15</ion-note>
+       </ion-item>
+  
+       <!-- Depilação c/ Creme -->
+       <ion-item mode="ios" button class="field" detail-icon="false" routerLink="/tela-agenda">
+        <ion-label> <h3>Depilação c/ Creme</h3>
+           <h5>Utiliza o creme depilatório,<br> derretendo a haste  <br>  do pelo.</h5> 
+        </ion-label>
+        <ion-note slot="end">R$10</ion-note>
+       </ion-item>
+  
+       <!-- Depilação c/ Linha -->
+       <ion-item mode="ios" button class="field" detail-icon="false" routerLink="/tela-agenda">
+        <ion-label> <h3>Depilação c/ Linha </h3>
+           <h5>Utiliza a linha, arrancando<br> o pelo desde a raiz.</h5> 
+        </ion-label>
+        <ion-note slot="end">R$15</ion-note>
+       </ion-item>
+
+       <ion-modal [isOpen]="isModalOpen">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-title>Editar Serviço</ion-title>
+              <ion-buttons slot="end">
+                <ion-button (click)="setOpen(false)">Voltar</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="body">
+           <ion-list>   
+             <h1 class="Titulo_Servico">Selecionar Serviço</h1>
+             <ion-item>
+              <ion-select [multiple]="true" placeholder="Selecione a Depilação">
+                <ion-select-option value="Depilação c/ Cera">Depilação c/ Cera</ion-select-option>
+                <ion-select-option value="Depilação c/ Pinça">Depilação c/ Pinça</ion-select-option>
+                <ion-select-option value="Depilação c/ Lâmina">Depilação c/ Lâmina</ion-select-option>
+            <ion-select-option value="Depilação c/ Creme">Depilação c/ Creme</ion-select-option>
+            <ion-select-option value="Depilação c/ Linha">Depilação c/ Linha</ion-select-option>
+          </ion-select>
+        </ion-item>
+           </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+  

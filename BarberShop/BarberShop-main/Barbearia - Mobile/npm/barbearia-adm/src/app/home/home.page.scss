@@ -1,0 +1,25 @@
+.loginbutton{
+    display: flex;
+    text-align: center;
+    margin: 40px;
+    border-radius: 10px 20px 30px 40px;
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+
+}
+
+.admin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 110px;
+}
+
+.admin h1{
+    font-family: 'Inika';
+    font-weight: 600;
+}

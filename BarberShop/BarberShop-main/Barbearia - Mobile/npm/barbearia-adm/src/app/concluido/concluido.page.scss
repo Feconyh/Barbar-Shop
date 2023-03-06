@@ -1,0 +1,108 @@
+.logo{
+    position: relative;
+    margin-top: 10px;
+    left: 7.7rem;
+    width: 65px;
+    height: 65px;
+}
+
+.voltar{
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    width: 85px;
+    height: 82px;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    top: 80px;
+}
+
+.confirma{
+    position: relative;
+    width: 240px;
+    height: 234px;
+
+    top: 0px;
+
+    animation-name: expandir;
+    animation-duration: 2.5s;
+    animation-delay: 1s;
+}
+
+@keyframes expandir{
+    0%   {width:240px; height:234px;}
+    50%  {top:-30px;width:320px; height:320px;}
+    100%    {width:240px; height:234px;}
+}
+
+// .circle {
+//     position: absolute;
+
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//     height: 250px;
+//     width: 250px;
+    
+//     top: 100px;
+//     left: 40px;
+
+//     background-color: #545454;
+//     border-radius: 50%;
+// }
+
+// .circle-background{
+//     position: absolute;
+
+//     height: 230px;
+//     width: 230px;
+
+//     background-color: #cdcdcd;
+//     border-radius: 50%;
+// }
+
+// .confirmar{
+//     position: absolute;
+
+//     height: 230px;
+//     width: 230px;
+
+//     top: -25px;
+//     left: 35px;
+// }
+
+// .diagonal_1{
+//     position: relative;
+
+//     height: 230px;
+//     width: 20px;
+
+
+//     left: 140px;
+
+//     background-color: #545454;
+//     border-radius: 7px;
+
+//     rotate: 35deg;
+// }
+
+// .diagonal_2{
+//     position: absolute;
+
+//     height: 110px;
+//     width: 20px;
+
+//     top: 107px;
+//     left: 50px;
+
+//     background-color: #545454;
+//     border-radius: 7px;
+
+//     rotate: -35deg;
+// }

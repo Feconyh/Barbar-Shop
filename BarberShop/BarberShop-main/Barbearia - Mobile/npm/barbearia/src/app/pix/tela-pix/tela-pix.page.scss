@@ -1,0 +1,102 @@
+.body{
+    --ion-background-color: #fff;
+    font-family: 'Inika';
+}
+
+.logo{
+    position: relative;
+    margin-top: 10px;
+    left: 7.5em;
+    width: 60px;
+    height: 60px;
+}
+
+.voltar{
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    width: 85px;
+    height: 82px;
+}
+
+.logoBarber{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    height: 60px;
+}
+
+.pix{
+    position: relative;
+    left: 90px;
+}
+
+.linhas{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.line{
+    border: solid 1px #000;
+    width: 85vw;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content h1{
+    font-weight: 600;
+}
+
+.content p{
+    font-weight: 600;
+    position: relative;
+    left: 30px;
+}
+
+.content h6{
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+    width: 300px;
+    height: 30px;
+}
+
+.content h5{
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    bottom: 15px;
+    width: 300px;
+    height: 30px;
+
+}
+
+.content .qrcode{
+    width: 150px;
+    height: 150px;
+}
+
+.content ion-button{
+    position: relative;
+    top: 70px;
+    color: #000;
+    border-radius: 30px;
+    border: 1px solid #000;
+    width: 80%;
+    font-family: 'Inika';
+    font-weight: 800;
+}
+
+.content ion-button:hover{
+    color: #000;
+    transition: 0.5s ease;
+    background-color: #a8a8a8;
+}

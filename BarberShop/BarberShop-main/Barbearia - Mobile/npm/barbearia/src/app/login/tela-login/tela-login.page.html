@@ -1,0 +1,34 @@
+<ion-content class="fundo">
+  <ion-button mode="ios" class="voltar" color="--ion-background-color:#323131;" routerLink="/home">
+    <img id="img_voltar" src="assets/imagens/voltar_branco.png" alt="">
+  </ion-button>
+  
+  <div class="logo">
+  <img src="assets/imagens/logo.png" alt="">
+</div>
+<div class="container">
+  <!-- Usuário -->
+  <ion-label id="usuario">Nome de Usuário</ion-label>
+
+  <img id="img_user" src="assets/imagens/user.png" alt="Usuário">
+
+  <ion-input id="input_user" [(ngModel)]="input_name" name="usuario"></ion-input>
+
+  <div id="lines1"></div>
+
+  <!-- Senha -->
+  <ion-label id="senha">Senha</ion-label>
+
+  <img id="img_senha" src="assets/imagens/senha.png" alt="Cadeado">
+
+  <ion-input id="input_senha" name="senha" type="password"></ion-input>
+
+  <img id="olho_aberto" src="assets/imagens/olho_aberto.png" alt="Ver_Senha">
+  <ion-checkbox></ion-checkbox>
+
+  <div id="lines2"></div>
+</div>
+<ion-button mode="ios" id="botao" color="--ion-background-color:#323131;" routerLink="/tela-principal" (click)="test()">Confirmar</ion-button>
+
+
+</ion-content>

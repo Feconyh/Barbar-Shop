@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@ionic-native/core": "^5.36.0",
+    "@ionic-native/geolocation": "^5.36.0",
+    "@ionic-native/native-geocoder": "^5.36.0",
+    "leaflet": "^1.9.3",
+    "leaflet-ant-path": "^1.3.0"
+  }
+}

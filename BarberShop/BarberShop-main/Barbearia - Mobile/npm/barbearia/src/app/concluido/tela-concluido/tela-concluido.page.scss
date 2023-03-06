@@ -1,0 +1,62 @@
+.body{
+    --ion-background-color: #fff;
+}
+
+.logo{
+    position: relative;
+    margin-top: 10px;
+    left: 7.7rem;
+    width: 65px;
+    height: 65px;
+}
+
+.voltar{
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    width: 85px;
+    height: 82px;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    top: 80px;
+}
+
+.confirma{
+    position: relative;
+    width: 240px;
+    height: 234px;
+
+    top: 0px;
+
+    animation-name: expandir;
+    animation-duration: 2.5s;
+    animation-delay: 0.5;
+}
+
+.title{
+    position: absolute;
+    top: 42vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+}
+
+.text{
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+}
+
+@keyframes expandir{
+    0%   {width:240px; height:234px;}
+    50%  {top:-30px;width:320px; height:320px;}
+    100%    {width:240px; height:234px;}
+}

@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button mode="ios" class="voltar" color="--ion-background-color:#323131;" routerLink="/tela-principal">
+      <img id="img_voltar" src="assets/imagens/voltar.png" alt="">
+    </ion-button>
+    <img class="logo" src="assets/imagens/logo.png" alt="">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body" mode="ios">
+
+   <ion-button class="buttonAdd" (click)="enviarDados()" color="--ion-background-color:#323131;">Criar</ion-button>
+   <ion-button class="buttonEdit" (click)="setOpen(true)" color="--ion-background-color:#323131;">Editar</ion-button>
+  <!-- começo da tela cabelo -->
+    <div class="title">
+      <img src="assets\imagens\CorteCabelo.png" alt="">
+      <ion-label>Cabelo</ion-label>
+    </div>
+    
+    <div class="itens" *ngFor="let consulta of consultas | async">
+    <ion-item mode="ios" button detail-icon="false" lines="full" class="field" routerLink="/tela-agenda">
+      <ion-label> 
+        <h3>{{consulta.nome}}</h3>
+        <h5>{{consulta.descricao}}</h5>
+      </ion-label>
+      <ion-note slot="end">R${{consulta.valor}}</ion-note>
+    </ion-item>
+  </div>
+  <!-- Final da tela cabelo -->
+
+      <!-- Início Modal -->
+      <ion-modal [isOpen]="isModalOpen">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-title>Editar Serviço</ion-title>
+              <ion-buttons slot="end">
+                <ion-button (click)="setOpen(false)">Voltar</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="body">
+            <ion-list>   
+              <h1 class="Titulo_Servico">Selecionar Serviço</h1>
+              <ion-item>
+                <ion-select (ionChange)="handleChange($event)"  placeholder="Selecione qual será editado">
+                  <ion-select-option *ngFor="let consulta of consultas | async">{{consulta.nome}}</ion-select-option>
+                </ion-select>
+              </ion-item>
+
+              <div class="ion-padding" *ngIf="editMode" mode="md">
+                <ion-item fill="outline">
+                  <ion-label position="floating">Nome</ion-label>
+                  <ion-input name="nome" type="text" placeholder="Digite o novo nome"></ion-input>
+                </ion-item>
+              
+                <ion-item fill="outline">
+                  <ion-label position="floating">Descrição</ion-label>
+                  <ion-input name="descricao" type="text" placeholder="Digite a nova descrição"></ion-input>
+                </ion-item>
+              
+                <ion-item fill="outline">
+                  <ion-label position="floating">Valor</ion-label>
+                  <ion-input name="valor" type="number" placeholder="Digite o novo valor"></ion-input>
+                </ion-item>
+
+                <ion-button>Salvar Dados</ion-button>
+              </div>
+            </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+      <!-- Fim Modal -->
+    </ion-content>
+    

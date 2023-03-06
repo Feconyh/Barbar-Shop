@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button class="voltar" color="--ion-background-color:#323131;" routerLink="/tela-principal">
+      <img id="img_voltar" src="assets/imagens/voltar.png" alt="">
+    </ion-button>
+
+    <ion-button class="bt_add" (click)="edit()" color="--ion-background-color:#323131;">
+      <ion-icon class="icons" [name]="icone"></ion-icon>
+    </ion-button>
+
+  <ion-button class="bt_config" color="--ion-background-color:#323131;" routerLink="/config">
+    <ion-icon class="icons" name="settings-outline"></ion-icon>
+  </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+  <div *ngIf="!editMode">
+    <img class="userP" src="assets/imagens/userPerfil.png" alt="Foto_Perfil">
+    <div class="circle">
+      <ion-icon class="camera" name="camera-outline"></ion-icon>
+    </div>
+
+    <!-- Nome --> 
+    <ion-item class="perfil" lines="none" *ngFor="let consulta of consultas | async">
+      <ion-label class="titulo" position="floating">Nome: {{consulta.nome}} </ion-label>
+      <img src="assets/imagens/user.png" alt="">
+    </ion-item>
+
+    <!-- Email -->
+    <ion-item class="perfil" lines="none" *ngFor="let consulta of consultas | async">
+      <ion-label class="titulo" position="floating">Email: {{consulta.email}}</ion-label>
+      <img src="assets/imagens/email.png" alt="">
+    </ion-item>
+
+  <!-- Senha -->
+    <ion-item class="perfil" lines="none" *ngFor="let consulta of consultas | async">
+      <ion-label class="titulo" position="floating">Senha: {{consulta.senha}}</ion-label>
+      <img src="assets/imagens/senha.png" alt="">
+    </ion-item>
+    
+  <!-- Telefone -->
+    <ion-item class="perfil" lines="none" *ngFor="let consulta of consultas | async">
+      <ion-label class="titulo" position="floating">Telefone: {{consulta.telefone}}</ion-label>
+      <img src="assets/imagens/telefone.png" alt="">
+    </ion-item>
+  </div>
+
+  <div *ngIf="editMode">
+    <img class="userP" src="assets/imagens/userPerfil.png" alt="Foto_Perfil">
+    <div class="circle">
+      <ion-icon class="camera" name="camera-outline"></ion-icon>
+    </div>
+
+    <!-- Nome --> 
+    <ion-item class="perfil" lines="none">
+      <ion-label class="titulo" position="floating">Nome:</ion-label>
+      <ion-input type="text" name="nome"></ion-input>
+      <div class="lines"></div>
+      <img class="position" src="assets/imagens/user.png" alt="">
+    </ion-item>
+
+    <!-- Email -->
+    <ion-item class="perfil" lines="none">
+      <ion-label class="titulo" position="floating">Email:</ion-label>
+      <ion-input type="email" name="email"></ion-input>
+      <div class="lines"></div>
+      <img class="position"  id="mail" src="assets/imagens/email.png" alt="">
+    </ion-item>
+
+  <!-- Senha -->
+    <ion-item class="perfil" lines="none">
+      <ion-label class="titulo" position="floating">Senha:</ion-label>
+      <ion-input type="password" name="senha"></ion-input>
+      <div class="lines"></div>
+      <img class="position" src="assets/imagens/senha.png" alt="">
+    </ion-item>
+    
+  <!-- Telefone -->
+    <ion-item class="perfil" lines="none">
+      <ion-label class="titulo" position="floating">Telefone:</ion-label>
+      <ion-input name="telefone" type="tel"></ion-input>
+      <div class="lines"></div>
+      <img class="position" src="assets/imagens/telefone.png" alt="">
+    </ion-item>
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@firebase/firestore": "^3.8.4",
+    "@google-cloud/firestore": "^6.4.3",
+    "firebase": "^9.17.2",
+    "firestore": "^1.1.6"
+  }
+}

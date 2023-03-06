@@ -1,0 +1,58 @@
+.logo{
+    position: relative;
+    margin-top: 10px;
+    left: 7.7rem;
+    width: 65px;
+    height: 65px;
+}
+
+.voltar{
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    width: 85px;
+    height: 82px;
+}
+
+.body{
+    --ion-background-color:#fff;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.container img{
+    height: 100px;
+    width: 100px;
+}
+
+.buttonEdit{
+    position: absolute;
+    width: 91px;
+    height: 36px;
+    left: 12.5rem;
+    top: 1rem;
+
+    color: #000;
+
+    border: 2px solid #000000;
+    border-radius: 30px;
+}
+
+ion-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ion-list img{
+    position: relative;
+    height: 32px;
+    width: 32px;
+}

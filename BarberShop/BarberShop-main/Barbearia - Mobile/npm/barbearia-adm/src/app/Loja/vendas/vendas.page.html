@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button class="voltar" color="--ion-background-color:#323131;" routerLink="/tela-principal">
+      <img id="img_voltar" src="assets/imagens/voltar.png" alt="">
+    </ion-button>
+    <img class="logo" src="assets/imagens/logo.png" alt="">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+
+  <div>
+    <div *ngIf="!editMode">
+      <ion-button class="buttonEdit" (click)="edit()" color="--ion-background-color:#323131;">Editar</ion-button>
+      
+      <div class="container">
+        <img src="assets/imagens/creme.png" alt="">
+        <h3><b>Vendas</b></h3>
+      </div>
+      
+      <ion-list>
+        <ion-item *ngFor="let item of items; let index" lines="none">
+          <img src="assets/imagens/creme.png" alt="">
+          <ion-label>{{ item }}</ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+    </div>
+    
+    <div *ngIf="editMode">
+      <ion-button class="buttonEdit" (click)="edit()" color="--ion-background-color:#323131;">Editar</ion-button>
+      
+      <div class="container">
+        <img src="assets/imagens/creme.png" alt="">
+        <h3><b>Vendas</b></h3>
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <h2>TELA 2</h2>
+  </div>
+  
+  <div>
+    <h2>TELA 3</h2>
+  </div>
+  
+  <div>
+    <h2>TELA 4</h2>
+  </div>
+  
+  <div>
+    <h2>TELA 5</h2>
+  </div>
+  
+  <div>
+    <h2>TELA 6</h2>
+  </div>
+  
+
+  </ion-content>
+  
