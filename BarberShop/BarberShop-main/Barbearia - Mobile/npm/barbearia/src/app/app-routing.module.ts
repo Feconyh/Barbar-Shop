@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'tela-agenda',
     pathMatch: 'full',
   
   },
@@ -74,10 +74,6 @@ const routes: Routes = [
   {
     path: 'tela-hidratacao',
     loadChildren: () => import('./servicoHidratacao/tela-hidratacao/tela-hidratacao.module').then( m => m.TelaHidratacaoPageModule)
-  },
-  {
-    path: 'tela-pix',
-    loadChildren: () => import('./pix/tela-pix/tela-pix.module').then( m => m.TelaPixPageModule)
   },
   {
     path: 'tela-contato',

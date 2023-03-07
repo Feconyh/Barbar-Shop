@@ -15,7 +15,7 @@ export class TelaAgendaPage implements OnInit {
     message: '',
   };
 
-  public editMode = 1
+  public editMode = 4
 
   constructor(private service: ServicesService) { }
 
@@ -27,9 +27,20 @@ export class TelaAgendaPage implements OnInit {
         break;
 
       // se tiver na tela 2(escolher os cortes) vá para a tela 5(pagamento concluido)
-      case 2:
+      // case 2:
+      //   this.editMode = 5;
+      //   break;
+
+      // se tiver na tela 3(Pagamento Pix) vá para a tela 5(pagamento concluido)
+      case 3:
         this.editMode = 5;
         break;
+
+      // se tiver na tela 4(Pagamento no Local) vá para a tela 5(pagamento concluido)
+      case 4:
+        this.editMode = 5;
+        break;
+      
     }
   }
 
