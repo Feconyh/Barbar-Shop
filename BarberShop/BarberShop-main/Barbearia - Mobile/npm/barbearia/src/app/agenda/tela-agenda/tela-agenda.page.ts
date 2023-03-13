@@ -15,7 +15,7 @@ export class TelaAgendaPage implements OnInit {
     message: '',
   };
 
-  public editMode = 4
+  public editMode = 1
 
   constructor(private service: ServicesService) { }
 

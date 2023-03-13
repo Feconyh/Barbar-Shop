@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'tela-agenda',
+    redirectTo: 'home',
     pathMatch: 'full',
   
   },
